@@ -7,11 +7,14 @@ public class AlienIA : MonoBehaviour
     public GameObject spaceShip;
     private float spawnTime = 3;
     private int possibility;
+    private float [] Music;
+    private int EnemyQdt;
 
     // Use this for initialization
     void Start()
     {
         InvokeRepeating("addEnemy", 1, spawnTime);
+        Music = GetComponent<Audio2>().MusicAnaliseVector();
     }
 
     void addEnemy()
@@ -22,7 +25,13 @@ public class AlienIA : MonoBehaviour
 
 		if (possibility >= 1 && possibility <= 40) {
 			enemy = alien as GameObject;
-			Instantiate (enemy);
+            for (int i=0;i< EnemyQdt;i++)
+            {
+                Instantiate(enemy);
+
+
+            }
+          
 					
 		}
 

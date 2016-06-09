@@ -6,10 +6,11 @@ public class AlienCommand : MonoBehaviour {
 	Rigidbody2D alien;
     GameObject GameController;
     public GameObject Player;
+    public float velocity;
 	// Use this for initialization
 	void Start () {
 		alien = gameObject.GetComponent<Rigidbody2D> ();
-		alien.velocity = new Vector2 (-3, 0);
+		alien.velocity = new Vector2 (velocity, 0);
         GameController = GameObject.FindGameObjectWithTag("GameController");
         Player = GameObject.FindGameObjectWithTag("Player"); 
         
