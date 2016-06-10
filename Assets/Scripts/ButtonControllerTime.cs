@@ -34,6 +34,7 @@ public class ButtonControllerTime : MonoBehaviour {
         {
             Debug.Log("Game over porra");
             Time.timeScale = 0;
+            GetComponent<Animator>().SetTrigger("Die");
             Destroy(gameObject);
           
         }
@@ -58,6 +59,7 @@ public class ButtonControllerTime : MonoBehaviour {
     {
         Pressed = true;
         Destroy(Enemys[0].gameObject);
+        GetComponent<Animator>().SetTrigger("Die");
         StartCoroutine(DestroyObject(0.1f));
     }
 
