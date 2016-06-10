@@ -6,7 +6,7 @@ public class Teste : MonoBehaviour {
     private int cont=0;
 	// Use this for initialization
 	void Start () {
-        MusicTeste = GetComponent<Audio2>().MusicAnaliseVector();
+        MusicTeste = GetComponent<AudioAnalisys>().MusicAnaliseVector();
         // InvokeRepeating("ContadorSegundo",0,1);
         for (int i=0;i<MusicTeste.Length;i++)
         {

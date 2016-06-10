@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\AlienCommand.cs" />
      <Compile Include="Assets\Scripts\AlienIA.cs" />
      <Compile Include="Assets\Scripts\Audio2.cs" />
+     <Compile Include="Assets\Scripts\AudioAnalisys.cs" />
      <Compile Include="Assets\Scripts\ButtonControllerTime.cs" />
      <Compile Include="Assets\Scripts\Instantiate.cs" />
      <Compile Include="Assets\Scripts\RandomRotation.cs" />
