@@ -15,7 +15,7 @@ public class AlienIA : MonoBehaviour
     void Start()
     {
         InvokeRepeating("addEnemy", 1, spawnTime);
-        Music = GetComponent<AudioAnalisys>().MusicAnaliseVector();
+        Music = GetComponent<Audio2>().MusicAnaliseVector();
 
     }
 
@@ -38,7 +38,7 @@ public class AlienIA : MonoBehaviour
            // Debug.Log(Music[(int)(GetComponent<AudioSource>().time)]/5);
             if (EnemyQdt<=0)
             {
-                EnemyQdt = 0;
+                EnemyQdt = 1;
 
             }
             if (EnemyQdt>=3)
@@ -47,7 +47,7 @@ public class AlienIA : MonoBehaviour
 
             }
            // Debug.Log(Time.time);
-            Debug.Log(GetComponent<AudioSource>().time);
+        //    Debug.Log(GetComponent<AudioSource>().time);
             for (int i=0;i< EnemyQdt;i++)
             {
                Instantiate(enemy, new Vector3(enemy.transform.position.x + i+5,enemy.transform.position.y,0),Quaternion.identity);
@@ -75,7 +75,7 @@ public class AlienIA : MonoBehaviour
             }
 
            // Debug.Log(Time.time);
-            Debug.Log(GetComponent<AudioSource>().time);
+         //   Debug.Log(GetComponent<AudioSource>().time);
             for (int i = 0; i < EnemyQdt; i++)
             {
                 Instantiate(enemy, new Vector3(enemy.transform.position.x + i+5, enemy.transform.position.y, 0), Quaternion.identity);

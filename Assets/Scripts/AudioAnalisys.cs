@@ -15,11 +15,11 @@ public class AudioAnalisys : MonoBehaviour {
     {
         int k = 0;
         AudioSource aud = GetComponent<AudioSource>();
-        float[] samples = new float[aud.clip.samples * aud.clip.channels];
+        float[] samples = new float[aud.clip.samples];
         aud.clip.GetData(samples, 0);
         // print(samples.Length);
         int tam;
-        tam = (int)(aud.clip.samples * aud.clip.channels / aud.clip.length);
+        tam = (int)(aud.clip.samples  / aud.clip.length);
         var AveragedSound = new float[samples.Length / (int)tam];
         var j = 0;
         for (var i = 0; i < samples.Length / (int)tam; ++i)

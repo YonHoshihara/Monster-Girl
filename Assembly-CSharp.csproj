@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AudioAnalyser.cs" />
      <Compile Include="Assets\Scripts\AlienCommand.cs" />
      <Compile Include="Assets\Scripts\AlienIA.cs" />
      <Compile Include="Assets\Scripts\Audio2.cs" />
@@ -55,6 +56,7 @@
      <Compile Include="Assets\Scripts\SceneManager.cs" />
      <Compile Include="Assets\Scripts\SliderAtMaximun.cs" />
      <Compile Include="Assets\Scripts\audio.cs" />
+     <Compile Include="Assets\SpectrumAnalysis.cs" />
      <Compile Include="Assets\Teste.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
