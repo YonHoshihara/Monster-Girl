@@ -21,6 +21,7 @@ public class Instantiate : MonoBehaviour {
 public void IntantiateONRandomPoints()
     {
 
+  
         Probability = Random.Range(0, 100);
 
         if ((Probability >= 0) && (Probability <= 33.33))

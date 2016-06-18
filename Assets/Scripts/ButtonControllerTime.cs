@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ButtonControllerTime : MonoBehaviour {
     public bool Pressed;
@@ -15,25 +17,23 @@ public class ButtonControllerTime : MonoBehaviour {
         InvokeRepeating("Redutor", 0, 1f);
         Enemys = GameObject.FindGameObjectsWithTag("Enemy");
         destroyed = Enemys.Length;
-       // StartCoroutine(DestroyObject(TimeToDoSequence+ 0.2f));
+   
 
     }
 	
 	void Update () {
-        //  Debug.Log(Pressed);
-    
+       
+         gameObject.GetComponentInChildren<Text>().text = TimeToDoSequence.ToString();
+       
 
         if ((TimeToDoSequence<=0)&&(Pressed))
         {
             Debug.Log("Prestou");
-            Destroy(Enemys[0].gameObject);
-            Destroy(gameObject);
-            
+            Destroy(gameObject);     
         }
         if ((TimeToDoSequence<=0)&&(!Pressed))
         {
-            Debug.Log("Game over porra");
-            Time.timeScale = 0;
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Game", LoadSceneMode.Single);
             GetComponent<Animator>().SetTrigger("Die");
             Destroy(gameObject);
           
@@ -58,7 +58,7 @@ public class ButtonControllerTime : MonoBehaviour {
     public void SetPressed()
     {
         Pressed = true;
-        Destroy(Enemys[0].gameObject);
+       // Destroy(Enemys[0].gameObject);
         GetComponent<Animator>().SetTrigger("Die");
         StartCoroutine(DestroyObject(0.1f));
     }

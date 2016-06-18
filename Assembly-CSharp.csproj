@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\Audio2.cs" />
      <Compile Include="Assets\Scripts\AudioAnalisys.cs" />
      <Compile Include="Assets\Scripts\AudioAnalyser.cs" />
+     <Compile Include="Assets\Scripts\Background_Scroll.cs" />
      <Compile Include="Assets\Scripts\ButtonControllerTime.cs" />
      <Compile Include="Assets\Scripts\Instantiate.cs" />
      <Compile Include="Assets\Scripts\RandomRotation.cs" />

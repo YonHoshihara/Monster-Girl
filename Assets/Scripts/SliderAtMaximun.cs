@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
+
 public class SliderAtMaximun : MonoBehaviour {
     public bool ISMaximun;
     private Slider slider;
@@ -38,8 +39,8 @@ void Start()
         if ((!ISMaximun)&&(TimeToDoSequence<=0))
         {
             StartCoroutine(DestroyObject(0.1f));
-            Debug.Log("GAME OVER");
-            Time.timeScale = 0;
+
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
         }
         if( (ISMaximun)&&(TimeToDoSequence>0))
         {
