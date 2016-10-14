@@ -6,7 +6,7 @@ public class InstantiateController : MonoBehaviour {
     public GameObject padrao;
     void Start()
     {
-        InvokeRepeating("Instantiates", 0, 1);
+        InvokeRepeating("Instantiates", 0, 0.55f);
     }
 
     public void Instantiates()
