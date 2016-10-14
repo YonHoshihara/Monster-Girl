@@ -10,29 +10,41 @@ public class ButtonController : MonoBehaviour {
         menina = false;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         menina = true;
         if (menino)
         {
-            menino = false;
-            Debug.Log((other.gameObject.transform.position - gameObject.transform.position).magnitude);
+			Debug.Log ("Prestou");
+			menino = false;
+           
             if ((other.gameObject.transform.position - gameObject.transform.position).magnitude >= distancia)
             {
                 Debug.Log("Great!");
+				Destroy (other.gameObject);
+				//Debug.Log ("Prestou");
+				menina = false;
             }else
             {
-                Debug.Log("Perfect");
+				if((other.gameObject.transform.position - gameObject.transform.position).magnitude < distancia)
+					Debug.Log("Perfect");
+					Destroy (other.gameObject);
+					menina = false;
+
             }
-            Destroy(other);
+		
+			Destroy (other.gameObject);
+			menina = false;
+
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        menina = false;
+        
         if (!menino){
             Debug.Log("Miss");
+			menina = false;
         }
         
     }
@@ -40,7 +52,9 @@ public class ButtonController : MonoBehaviour {
     void OnMouseDown()
     {
         if (menina) {
-            menino = true;
+			Debug.Log (gameObject);
+			menino = true;
+
         }
         
     }

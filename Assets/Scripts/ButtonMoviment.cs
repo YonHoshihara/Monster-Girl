@@ -12,7 +12,7 @@ public class ButtonMoviment : MonoBehaviour {
     void Start () {
         num = Random.Range(0, 100);
         vector = Probability(num);
-        GetComponent<Rigidbody2D>().AddForce((vector - gameObject.transform.position) * 25);
+		GetComponent<Rigidbody2D>().AddForce((vector - gameObject.transform.position) * speed);
     }
 	
 	Vector3 Probability(int num)

@@ -1,0 +1,17 @@
+/Users/ludus2/Monster-Girl/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/ludus2/Monster-Girl/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/ludus2/Monster-Girl/obj/Debug/Assembly-CSharp.dll
+/Users/ludus2/Monster-Girl/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/ludus2/Monster-Girl/Temp/bin/Debug/UnityEngine.dll
+/Users/ludus2/Monster-Girl/Temp/bin/Debug/UnityEditor.dll
+/Users/ludus2/Monster-Girl/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/ludus2/Monster-Girl/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/ludus2/Monster-Girl/Temp/bin/Debug/Mono.Cecil.dll
+/Users/ludus2/Monster-Girl/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/ludus2/Monster-Girl/Temp/bin/Debug/Unity.DataContract.dll
+/Users/ludus2/Monster-Girl/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/ludus2/Monster-Girl/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/ludus2/Monster-Girl/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/ludus2/Monster-Girl/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/ludus2/Monster-Girl/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/ludus2/Monster-Girl/Temp/bin/Debug/Mono.Cecil.Mdb.dll
