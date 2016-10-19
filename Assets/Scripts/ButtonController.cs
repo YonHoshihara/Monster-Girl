@@ -9,6 +9,7 @@ public class ButtonController : MonoBehaviour {
 	private StaminaManager stamina;
 	public int scoreGreat, scorePerfect;
 	public GameObject feedback;
+	private SoundController sound;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class ButtonController : MonoBehaviour {
 		stamina = GameObject.FindGameObjectWithTag("GameController").GetComponent<StaminaManager>();
         menino = false;
         menina = false;
+		sound = GameObject.FindGameObjectWithTag ("GameController").GetComponent<SoundController> ();
     }
 
     void OnTriggerStay2D(Collider2D other)
@@ -72,6 +74,7 @@ public class ButtonController : MonoBehaviour {
 
     void OnMouseDown()
     {
+		sound.PlayTapSound ();
 		if (menina) {
 			Debug.Log (gameObject);
 			menino = true;

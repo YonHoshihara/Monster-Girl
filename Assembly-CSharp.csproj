@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\LoadSceneManager.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\StaminaManager.cs" />
+     <Compile Include="Assets\SoundController.cs" />
      <Compile Include="Assets\VictoryCondition.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
