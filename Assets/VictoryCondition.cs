@@ -3,11 +3,11 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class VictoryCondition : MonoBehaviour {
-	private AudioSource audio;
+	public AudioSource audio;
 	public string scene;
 	// Use this for initialization
 	void Start () {
-		audio = GetComponent<AudioSource> ();
+		//ßaudio = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
