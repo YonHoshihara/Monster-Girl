@@ -10,9 +10,16 @@ public class ButtonController : MonoBehaviour {
 	public int scoreGreat, scorePerfect;
 	public GameObject feedback;
 	private SoundController sound;
-
+	[SerializeField]private Animator MonsterGirl;
+	[SerializeField]private Animator Enemy;
+	public GameObject EnemyToInstantiate;
+	//public GameObject AlienCaralhosao;
+	public static int EnemyLife = 0;
+	public static int cont;
     void Start()
     {
+
+		Enemy = GameObject.FindGameObjectWithTag ("Enemy").GetComponent<Animator>();
 		feedback.SetActive(true);
 		feedback.GetComponent<Text>().text = "GO!";
 		scoreManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<ScoreManager>();
@@ -22,17 +29,23 @@ public class ButtonController : MonoBehaviour {
 		sound = GameObject.FindGameObjectWithTag ("GameController").GetComponent<SoundController> ();
     }
 
+
+		
     void OnTriggerStay2D(Collider2D other)
     {
         menina = true;
         if (menino)
         {
-			Debug.Log ("Prestou");
+			//Debug.Log ("Prestou");
 			menino = false;
            
             if ((other.gameObject.transform.position - gameObject.transform.position).magnitude >= distancia)
             {
-                Debug.Log("Great!");
+				
+				Debug.Log("Great!");
+				Debug.Log (Enemy);
+				MonsterGirl.SetTrigger ("atack");
+				Enemy.SetTrigger ("Damage");
 				Destroy (other.gameObject);
 				feedback.SetActive(true);
 				Invoke ("Deactivate", 0.5f);
@@ -42,7 +55,12 @@ public class ButtonController : MonoBehaviour {
             }else
             {
 				if((other.gameObject.transform.position - gameObject.transform.position).magnitude < distancia)
-					Debug.Log("Perfect");
+
+
+					//Debug.Log("Perfect");
+					
+					MonsterGirl.SetTrigger ("atack");
+					Enemy.SetTrigger ("Damage");
 					Destroy (other.gameObject);
 					feedback.SetActive(true);
 					Invoke ("Deactivate", 0.5f);
@@ -62,7 +80,10 @@ public class ButtonController : MonoBehaviour {
     {
         
         if (!menino){
-            Debug.Log("Miss");
+			Enemy.SetTrigger ("Atack");
+			MonsterGirl.SetTrigger ("Damage");
+
+			Debug.Log("Miss");
 			feedback.SetActive(true);
 			Invoke ("Deactivate", 0.5f);
 			feedback.GetComponent<Text>().text = "Miss!";
@@ -76,14 +97,16 @@ public class ButtonController : MonoBehaviour {
     {
 		sound.PlayTapSound ();
 		if (menina) {
-			Debug.Log (gameObject);
+			//Debug.Log (gameObject);
 			menino = true;
 
 		} else {
-			Debug.Log ("Bad");
+			//Debug.Log ("Bad");
 			feedback.SetActive(true);
 			Invoke ("Deactivate", 0.5f);
 			feedback.GetComponent<Text>().text = "Bad!";
+			Enemy.SetTrigger ("Atack");
+			MonsterGirl.SetTrigger ("Damage");
 			stamina.MissOrBad ("Bad");
 		}
     }
@@ -91,4 +114,13 @@ public class ButtonController : MonoBehaviour {
 	void Deactivate(){
 		feedback.SetActive (false);
 	}
+	IEnumerator InstantiateEnemy(GameObject Objeto){
+
+
+		yield return new WaitForSeconds (0.1f);
+		Instantiate (Objeto);
+		Enemy = Objeto.GetComponent<Animator>();
+	}
+
+
 }
